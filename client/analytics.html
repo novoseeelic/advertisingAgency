@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аналитика</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Рекламная платформа</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="advertisers.html">Рекламодатели</a></li>
+        <li><a href="agents.html">Агенты</a></li>
+        <li><a href="contracts.html">Договоры</a></li>
+        <li><a href="ads.html">Объявления</a></li>
+        <li><a href="analytics.html">Аналитика</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Аналитика эффективности рекламы</h2>
+    
+    <div class="filters">
+      <div>
+        <label for="advertiserFilter">Рекламодатель:</label>
+        <select id="advertiserFilter">
+          <option value="">Все</option>
+        </select>
+      </div>
+      <button id="applyFilters">Применить</button>
+    </div>
+
+    <table id="analyticsTable">
+      <thead>
+        <tr>
+          <th>Объявление</th>
+          <th>Рекламодатель</th>
+          <th>Просмотры</th>
+          <th>Вовлеченность</th>
+          <th>Эффективность</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="charts">
+      <div class="chart-container">
+        <canvas id="viewsChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="engagementChart"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/analytics.js" type="module"></script>
+</body>
+</html>

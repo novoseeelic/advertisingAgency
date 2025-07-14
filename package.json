@@ -1,0 +1,20 @@
+{
+    "name": "advertising-platform",
+    "version": "1.0.0",
+    "description": "PostgreSQL Advertising Platform",
+    "main": "server/app.js",
+    "scripts": {
+        "start": "node server/app.js",
+        "dev": "nodemon server/app.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.5.0",
+        "express": "^4.21.2",
+        "path": "^0.12.7",
+        "pg": "^8.16.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.2"
+    }
+}

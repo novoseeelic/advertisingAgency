@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рекламные агенты</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Рекламная платформа</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="advertisers.html">Рекламодатели</a></li>
+        <li><a href="agents.html">Агенты</a></li>
+        <li><a href="contracts.html">Договоры</a></li>
+        <li><a href="ads.html">Объявления</a></li>
+        <li><a href="analytics.html">Аналитика</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Рекламные агенты</h2>
+    <button id="addAgent">Добавить агента</button>
+    
+    <table id="agentsTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>ФИО</th>
+          <th>Телефон</th>
+          <th>Комиссия (%)</th>
+          <th>Дата найма</th>
+          <th>Действия</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="agentModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modalTitle">Добавить агента</h3>
+        <form id="agentForm">
+          <input type="hidden" id="agentId">
+          <div>
+            <label for="full_name">ФИО:</label>
+            <input type="text" id="full_name" required>
+          </div>
+          <div>
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" required>
+          </div>
+          <div>
+            <label for="commission_rate">Комиссия (%):</label>
+            <input type="number" id="commission_rate" min="0" max="100" step="0.01" required>
+          </div>
+          <div>
+            <label for="hire_date">Дата найма:</label>
+            <input type="date" id="hire_date" required>
+          </div>
+          <button type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/agents.js" type="module"></script>
+</body>
+</html>
